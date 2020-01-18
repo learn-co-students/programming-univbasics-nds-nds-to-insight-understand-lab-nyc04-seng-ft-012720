@@ -4,8 +4,11 @@ require 'directors_database'
 
 def pretty_print_nds(nds)
   # Change the code below to pretty print the nds with pp
-  nil
+  pp directors_database
 end
 
 def print_first_directors_movie_titles
-end
+  directors_database[0][:movies].each{|i|
+    puts i[:title]
+  }
+end 
